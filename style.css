@@ -99,6 +99,8 @@ nav ul li a:hover::after{
     font-size: 30px;
 }
 
+
+
 .chat-container {
   width: 400px;
   background: #161b22;
@@ -159,6 +161,7 @@ button {
   cursor: pointer;
   color: white;
 }
+
 
 .header-text h1{
     color: #fff;
