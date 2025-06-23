@@ -1,5 +1,4 @@
-
-            const form = document.getElementById("chat-form");
+ const form = document.getElementById("chat-form");
             const input = document.getElementById("user-input");
             const chatBox = document.getElementById("chat-box");
 
@@ -117,21 +116,7 @@ var tablinks = document.getElementsByClassName("tab-links");
             document.getElementById(tabname).classList.add("active-tab");
             }
             
-
-
-var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove("active-link");
-            }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-            }
-            
             
             tablink.classList.remove("active-link");
+
+
