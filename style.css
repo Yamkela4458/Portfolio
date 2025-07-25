@@ -464,3 +464,15 @@ button {
 #project{
     background-image: url(images/IMG_8507.JPG);
 }
+
+.cursor {
+  display: inline-block;
+  animation: blink 0.7s steps(2, start) infinite;
+  color: burlywood;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
