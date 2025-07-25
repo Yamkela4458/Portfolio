@@ -5,6 +5,34 @@
 
         <title>Personal Portfolio Website</title>
         <link rel="Stylesheet" href="style.css">
+
+            <style>
+      /* Floating Words */
+      .floating-word {
+        position: fixed;
+        font-size: 20px;
+        font-weight: bold;
+        color: burlywood;
+        animation: floatWord 5s linear infinite;
+        pointer-events: none;
+        z-index: 999;
+      }
+
+      @keyframes floatWord {
+        0% {
+          transform: translateY(100vh) scale(1);
+          opacity: 0;
+        }
+        25% {
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-10vh) scale(1.2);
+          opacity: 0;
+        }
+      }
+    </style>
+
     </head>
     <body>
     <div id="header">
@@ -33,7 +61,8 @@
 
 
             <div class="header-text">
-                   <h1>Hello There,</h1>
+                   <h1><span id="typed-text"></span><span class="cursor">|</span>Hello There</h1>
+
                    <h1>This is Yamkela Lusithi</h1>
                    <p>Front-End Web Developer</p>
             </br>
@@ -217,11 +246,48 @@
         </div>
     </div>
 
- 
+ <script>
+      const words = [
+        "Welcome",
+        "UI/UX",
+        "HTML5",
+        "JavaScript",
+        "Creative",
+        "Responsive",
+        "Secure",
+        "Yamkela Lusithi",
+        "Innovator",
+        "Fast",
+        "Nice to meet you",
+        "Hello",
+        "</div>",
+        "</class>",
+        "console.log",
+      ];
+
+      function createFloatingWord(text) {
+        const word = document.createElement("div");
+        word.className = "floating-word";
+        word.textContent = text;
+
+        word.style.left = Math.random() * 100 + "vw";
+        word.style.top = 100 + Math.random() * 200 + "px";
+        word.style.fontSize = Math.random() * 20 + 15 + "px";
+
+        document.body.appendChild(word);
+
+        setTimeout(() => {
+          word.remove();
+        }, 10000);
+      }
+
+      setInterval(() => {
+        const randomWord = words[Math.floor(Math.random() * words.length)];
+        createFloatingWord(randomWord);
+      }, 1500);
+    </script>
+
          <script src="script.js"></script>
         
     </body>
 </html>
-
-
-  
